@@ -51,14 +51,13 @@ class _SearchScreenState extends State<SearchScreen> {
                   _showResult(_textEditingController.text);
                 },
                 icon: const Icon(Icons.search),
-              ),
+              )
             ),
           ),
           Expanded(
             child: GridView.count(
               crossAxisCount: 3,
-              children:
-                  _pictures.map((e) => Image.network(e.previewURL)).toList(),
+              children: _pictures.map((e) => Image.network(e.previewURL)).toList(),
             ),
           ),
         ],

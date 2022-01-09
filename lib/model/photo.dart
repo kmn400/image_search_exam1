@@ -5,16 +5,11 @@ class Photo {
     required this.previewURL,
   });
 
-  Photo.fromMap(Map<String, dynamic> json) : previewURL = json['previewUrl'];
+  Photo.fromMap(Map<String, dynamic> json) : previewURL = json['previewURL'];
 
   factory Photo.fromJson(Map<String, dynamic> json) {
     return Photo(
       previewURL: json['previewURL'],
     );
-  }
-
-  @override
-  String toString() {
-    return 'Photo: $previewURL';
   }
 }

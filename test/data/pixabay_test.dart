@@ -10,10 +10,6 @@ void main() {
         'https://pixabay.com/api/?key=17828481-17c071c7f8eadf406822fada3&q=iphone&image_type=photo'));
 
     final result = jsonDecode(response.body);
-    // print(result['total']);
-    // print(result['totalHits']);
-    final picture = Picture.fromJson(result['hits'][0]);
-
     final List jsonHits = result['hits'];
 
     List<Picture> pictures = [];
@@ -22,7 +18,6 @@ void main() {
       final picture = Picture.fromJson(jsonHits[i]);
       pictures.add(picture);
     }
-
     print(pictures);
   });
 }
